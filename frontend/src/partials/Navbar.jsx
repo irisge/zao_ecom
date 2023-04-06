@@ -14,13 +14,13 @@ function Navbar({ bg }) {
   };
 
   return (
-    <nav className="flex justify-between items-center z-30 self-start ">
+    <nav className="flex justify-between items-center z-30 self-start w-full ">
       <a
         href="/"
         className={`${
           bg
-            ? 'text-dark-brown font-extrabold text-2xl 2xl:text-[40px] p-8'
-            : 'text-yellow font-extrabold text-2xl 2xl:text-[40px] p-8'
+            ? 'text-dark-brown font-extrabold text-base sm:text-2xl 2xl:text-[40px] whitespace-nowrap p-8'
+            : 'text-yellow font-extrabold text-base sm:text-2xl 2xl:text-[40px] whitespace-nowrap p-8'
         }`}
       >
         <h1>ZAO SURF SCHOOL</h1>

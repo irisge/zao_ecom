@@ -4,8 +4,6 @@ import { Outlet } from 'react-router-dom';
 import Navbar from '../partials/Navbar';
 import Footer from '../partials/Footer';
 
-import hero from '../assets/hero.svg';
-
 function HomeLayout() {
   return (
     <div className="grid grid-rows-7 h-full w-full relative font-inter">
