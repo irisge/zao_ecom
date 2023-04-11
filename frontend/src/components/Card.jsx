@@ -1,11 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+
+import { useUserContext } from '../contexts/UserContext';
+import SignIn from './SignIn';
 
 import grille from '../assets/view-grid.svg';
 import panier from '../assets/shopping-bag-wo-circle.png';
+import SignUp from './SignUp';
 
 function Card({ produits }) {
+  const [signInPopUpOn, setSignInPopUpOn] = useState(false);
+  const [signUpPopUpOn, setSignUpPopUpOn] = useState(false);
+  const { userId } = useUserContext();
   const handleLoginAndBag = async (e) => {
+    if (!userId) {
+      return setSignInPopUpOn(true);
+    }
   };
 
   return (
@@ -25,10 +35,22 @@ function Card({ produits }) {
             src={`${import.meta.env.VITE_BACKEND_URL}/${p.picture}`}
             alt={p.title}
           />
-          <p className="font-regular text-xl lg:text-2xl text-dark-blue">{p.title}</p>
-          <p className="font-bold text-xl lg:text-2xl text-dark-blue">{p.price}€</p>
+          <p className="font-regular text-xl lg:text-2xl text-dark-blue">
+            {p.title}
+          </p>
+          <p className="font-bold text-xl lg:text-2xl text-dark-blue">
+            {p.price}€
+          </p>
         </div>
       ))}
+      {signInPopUpOn && (
+        <SignIn
+          signInPopUpOn={signInPopUpOn}
+          setSignInPopUnOn={setSignInPopUpOn}
+          setSignUpPopUpOn={setSignUpPopUpOn}
+        />
+      )}
+      {signUpPopUpOn && <SignUp />}
     </div>
   );
 }
