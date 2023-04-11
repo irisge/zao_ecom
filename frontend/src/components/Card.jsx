@@ -23,7 +23,7 @@ function Card({ produits }) {
     <div className="flex flex-col items-center justify-between w-full md:grid lg:grid md:grid-cols-2 lg:grid-cols-3 gap-8 ">
       {produits.map((p) => (
         <div
-          className="bg-light-blue rounded-2xl w-[275px] h-[300px] lg:w-[300px] lg:h-[350px] place-self-center flex flex-col items-center justify-between px-4 py-4 text-center"
+          className="bg-light-blue rounded-2xl w-[275px] h-[300px] lg:w-[300px] lg:h-[350px] 2xl:w-[450px] 2xl:h-[500px] place-self-center flex flex-col items-center justify-between px-4 py-4 text-center"
           key={p.id}
         >
           <div className="flex w-full justify-between">

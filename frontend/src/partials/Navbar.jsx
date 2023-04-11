@@ -35,7 +35,7 @@ function Navbar({ bg }) {
       <div
         className={`${
           mobileNavOpen
-            ? 'flex flex-col items-center bg-dark-blue w-screen absolute h-screen top-24 lg:hidden'
+            ? 'flex flex-col z-30 items-center bg-dark-blue w-screen absolute h-screen top-20 lg:hidden'
             : 'hidden lg:flex lg:justify-between lg:items-center lg:w-2/4 lg:py-8'
         }`}
       >
