@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
+import PropTypes from 'prop-types';
+
 import menu from '../assets/menu.svg';
 import cart from '../assets/shopping-bag.svg';
 
@@ -35,7 +37,7 @@ function Navbar({ bg }) {
       <div
         className={`${
           mobileNavOpen
-            ? 'flex flex-col z-30 items-center bg-dark-blue w-screen absolute h-screen top-20 lg:hidden'
+            ? 'flex flex-col z-30 items-center bg-dark-blue w-screen absolute h-screen top-20 landscape:top-13 lg:hidden'
             : 'hidden lg:flex lg:justify-between lg:items-center lg:w-2/4 lg:py-8'
         }`}
       >
@@ -61,7 +63,7 @@ function Navbar({ bg }) {
           onClick={() => setMobileNavOpen(false)}
           className="font-extrabold text-yellow text-lg 2xl:text-3xl py-8 lg:py-0"
         >
-          L'École
+          L&apos;École
         </NavLink>
         <NavLink
           style={getActiveLinkStyle}
@@ -82,5 +84,9 @@ function Navbar({ bg }) {
     </nav>
   );
 }
+
+Navbar.propTypes = {
+  bg: PropTypes.bool.isRequired,
+};
 
 export default Navbar;

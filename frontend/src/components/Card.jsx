@@ -1,23 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-
-// import { useNavigate } from 'react-router-dom';
-// import SignIn from './SignIn';
 
 import grille from '../assets/view-grid.svg';
 import panier from '../assets/shopping-bag-wo-circle.png';
-import instance from '../services/serviceApi';
-// import { useUserContext } from '../contexts/UserContext';
 
 function Card({ produits }) {
-  const [signInPopUpOn, setSignInPopUpOn] = useState(false);
-  //   const [productData, setProductData] = useState([]);
-
-  //   const { cartId, setCartId, userId } = useUserContext();
-
-  //   const navigate = useNavigate();
-
-  const handleLoginAndBag = async (e) => {};
+  const handleLoginAndBag = async (e) => {
+  };
 
   return (
     <div className="flex flex-col items-center justify-between w-full md:grid lg:grid md:grid-cols-2 lg:grid-cols-3 gap-8 ">
