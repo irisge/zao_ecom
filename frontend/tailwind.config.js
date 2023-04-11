@@ -26,6 +26,7 @@ export default {
       },
       gridTemplateRows: {
         7: 'repeat(6, minmax(0, 1fr)), 84px',
+        '7bis': '90px, repeat(4, minmax(0, 1fr)), 84px',
         9: 'repeat(9, minmax(0, 1fr))',
       },
       gridRowStart: {

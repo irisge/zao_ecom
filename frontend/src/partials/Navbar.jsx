@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
+import PropTypes from 'prop-types';
+
 import menu from '../assets/menu.svg';
 import cart from '../assets/shopping-bag.svg';
 
@@ -14,13 +16,13 @@ function Navbar({ bg }) {
   };
 
   return (
-    <nav className="flex justify-between items-center z-30 self-start ">
+    <nav className="flex justify-between items-center z-30 self-start w-full ">
       <a
         href="/"
         className={`${
           bg
-            ? 'text-dark-brown font-extrabold text-2xl 2xl:text-[40px] p-8'
-            : 'text-yellow font-extrabold text-2xl 2xl:text-[40px] p-8'
+            ? 'text-dark-brown font-extrabold text-base sm:text-2xl 2xl:text-[40px] whitespace-nowrap p-8'
+            : 'text-yellow font-extrabold text-base sm:text-2xl 2xl:text-[40px] whitespace-nowrap p-8'
         }`}
       >
         <h1>ZAO SURF SCHOOL</h1>
@@ -35,7 +37,7 @@ function Navbar({ bg }) {
       <div
         className={`${
           mobileNavOpen
-            ? 'flex flex-col items-center bg-dark-blue w-screen absolute h-screen top-24 lg:hidden'
+            ? 'flex flex-col z-30 items-center bg-dark-blue w-screen absolute h-screen top-20 landscape:top-13 lg:hidden'
             : 'hidden lg:flex lg:justify-between lg:items-center lg:w-2/4 lg:py-8'
         }`}
       >
@@ -61,7 +63,7 @@ function Navbar({ bg }) {
           onClick={() => setMobileNavOpen(false)}
           className="font-extrabold text-yellow text-lg 2xl:text-3xl py-8 lg:py-0"
         >
-          L'École
+          L&apos;École
         </NavLink>
         <NavLink
           style={getActiveLinkStyle}
@@ -82,5 +84,9 @@ function Navbar({ bg }) {
     </nav>
   );
 }
+
+Navbar.propTypes = {
+  bg: PropTypes.bool.isRequired,
+};
 
 export default Navbar;

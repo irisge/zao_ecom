@@ -8,7 +8,7 @@ function Home() {
   const navigate = useNavigate();
 
   return (
-    <div className="grow grid grid-rows-4 lg:grid-rows-3 h-full w-full z-20 ">
+    <div className="grow grid grid-rows-4 lg:grid-rows-3 h-full w-full z-0 ">
       <div className="bg-line-pattern bg-no-repeat bg-bottom lg:bg-left bg-contain row-start-2 row-end-5 lg:row-end-4 min-h-full  min-w-[100vw] absolute lg:relative self-end lg:self-center lg:min-w-[600px]" />
       <div className="row-start-1 lg:row-span-2 flex flex-col justify-evenly items-end lg:items-center justify-self-end w-full  max-w-[300px] lg:min-w-md font-extrabold text-xs lg:text-base px-4">
         <button
